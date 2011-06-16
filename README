@@ -1,0 +1,16 @@
+Este proyecto es una prueba de concepto para lograr video streaming de datos
+procesado con OpenCV.
+
+La idea es poder capturar frames desde una camara utilizando OpenCV para después
+realizar algún procesamiento y finalmente poner el resultado de este procesamiento
+en un sitio web, como si de video en vivo se tratara. 
+
+¿Por qué hacer el streaming a una web?
+Para que así puede ser accedida por cualquier dispositivo sin la necesidad
+de crear clientes para cada plataforma.
+
+
+Una approach anterior fue utilizar Gstreamer, pero no logré transmitir a un sitio 
+web.
+
+Cualquier duda, comentario.. no dudes en contactarme.
