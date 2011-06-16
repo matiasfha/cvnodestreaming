@@ -14,3 +14,19 @@ Una approach anterior fue utilizar Gstreamer, pero no logré transmitir a un sit
 web.
 
 Cualquier duda, comentario.. no dudes en contactarme.
+
+
+Funcionamiento:
+
+main.cpp contiene lo necesario para hacer la captura desde una camara utilizando
+OpenCV, cuando un frame es captura (y procesado) este es enviado al servidor Node.js
+utilizando Thrift.
+
+
+El servidor Node.js escucha en 2 puertos, uno (8080) para la web y en el 9090 
+para thrift.
+
+Cuando el servidor nodejs+thrift recibe una imagen envia una señal a la sección
+que maneja el servicio web (con express) para que escriba el frame recién recibido
+utilizando multipart/x-mixed-replace .. generando un stream como el que se puede 
+ver en camaras ip (mjpeg).q
